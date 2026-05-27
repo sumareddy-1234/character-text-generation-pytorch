@@ -1,0 +1,30 @@
+{
+  "lstm": {
+    "temperature_0.5": [
+      "To be or not to be to the lave be platest the to seether he outher of to senting the leare the make to the be parton and the people.",
+      "First and that the all the the we seet and the lattice of the have ither to that the"
+    ],
+    "temperature_1.0": [
+      "To be or not to beore Soll, and not'lf, worsin yund, To all fap'll Hith, whathing the allading abling",
+      "Coilant the counond-yate Marcius carant, good that he take other's are lainver han"
+    ],
+    "temperature_1.5": [
+      "To be or not to bephasgedFela abkade Yepa. IUL LWith, Insoms yowleTs outy's",
+      "Thest cilhad usned that: Oqpousce, difld Dothaaink, so swilth"
+    ]
+  },
+  "transformer": {
+    "temperature_0.5": [
+      "To be or not to beeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    ],
+    "temperature_1.0": [
+      "To be or not to beeeeeeeeeeeeeeeeeekeeevet eseeeeeeeeeeeeeeee",
+      "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    ],
+    "temperature_1.5": [
+      "To be or not to be;eqjuuuuuooooooooo'ooooooooooooozenooquouoookE",
+      "ouououououououououououououououououououououououououououou"
+    ]
+  }
+}
