@@ -1,5 +1,3 @@
 __pycache__/
 *.pyc
 venv/
-models/*.pth
-results/*.png
