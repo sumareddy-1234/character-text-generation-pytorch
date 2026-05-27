@@ -40,6 +40,11 @@ After training, the models can generate new text starting from a seed sentence.
 - Visualize training loss curves
 
 ---
+### 🧪 Dataset Reference
+
+- Tiny Shakespeare Dataset  
+  https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt  
+  Used as training corpus for both LSTM and Transformer models.
 
 # Technologies Used
 
