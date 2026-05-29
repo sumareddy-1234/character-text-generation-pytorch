@@ -386,6 +386,171 @@ Through this project, the following concepts were learned:
 - Debugging training and environment issues
 
 ---
+# Docker Setup and Execution
+
+This project supports Docker-based execution to ensure a consistent and reproducible environment across different systems.
+
+Docker was used to:
+
+* Simplify dependency management
+* Avoid local environment conflicts
+* Run the project in an isolated containerized environment
+* Ensure consistent execution across machines
+
+---
+
+## Docker Requirements
+
+Before running the project, install the following:
+
+* Docker Desktop
+* Docker Compose
+
+Verify installation:
+
+```bash
+docker --version
+docker compose version
+```
+
+---
+
+# Running the Project with Docker
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/sumareddy-1234/character-text-generation-pytorch.git
+cd character-text-generation-pytorch
+```
+
+---
+
+## 2. Build Docker Image
+
+```bash
+docker compose build
+```
+
+This command:
+
+* Downloads the required Python image
+* Installs project dependencies
+* Configures the application container
+
+---
+
+## 3. Verify Docker Environment
+
+```bash
+docker compose run --rm app python --version
+```
+
+Example output:
+
+```text
+Python 3.10.20
+```
+
+---
+
+# Training Models using Docker
+
+## Train LSTM Model
+
+```bash
+docker compose run --rm app python src/train.py --model lstm --epochs 1
+```
+
+---
+
+## Train Transformer Model
+
+```bash
+docker compose run --rm app python src/train.py --model transformer --epochs 1
+```
+
+During training:
+
+* Batch-wise loss values are displayed
+* Average epoch loss is calculated
+* Trained models are automatically saved inside the `models/` directory
+
+---
+
+# Generate Text using Docker
+
+## Generate Text using LSTM
+
+```bash
+docker compose run --rm app python src/generate.py --model lstm --model_path models/lstm.pth --temperature 1.0
+```
+
+---
+
+## Generate Text using Transformer
+
+```bash
+docker compose run --rm app python src/generate.py --model transformer --model_path models/transformer.pth --temperature 1.0
+```
+
+---
+
+# Docker Project Files
+
+Additional Docker configuration files used in this project:
+
+```text
+Dockerfile
+docker-compose.yml
+.dockerignore
+```
+
+## Purpose of Each File
+
+### Dockerfile
+
+Defines:
+
+* Base Python environment
+* Required dependencies
+* Project execution setup
+
+### docker-compose.yml
+
+Manages:
+
+* Container configuration
+* Service execution
+* Volume and command handling
+
+### .dockerignore
+
+Excludes unnecessary files from Docker image creation to improve build speed and reduce image size.
+
+---
+
+# Benefits of Docker in This Project
+
+* Portable execution environment
+* Simplified setup process
+* Consistent dependency management
+* Improved reproducibility
+* Easier deployment and testing
+
+---
+
+# Docker Build Status
+
+The project was successfully:
+
+* Built using Docker Compose
+* Trained inside Docker containers
+* Executed using isolated container environments
+
+Both LSTM and Transformer models were successfully trained and tested using Docker.
+
+---
 
 # Conclusion
 
